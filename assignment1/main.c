@@ -76,12 +76,12 @@ void func_BGlist(char **cmd){
 
 
 void func_BGkill(char* str_pid){
-      if (str_pid == NULL){
-     	printf("Error: missing parameters\n");
-	return;
-      }
+  if (str_pid == NULL){
+    printf("Error: missing parameters\n");
+	  return;
+  }
   pid_t pid = atoi(str_pid);
-	int boolVal = PifExist(head, pid);
+	int boolVal = PifExist(head, pid)
 	if (boolVal != 0){
 	  int eVal = kill(pid, SIGKILL); //Signal to kill process
 	  if (eVal != 0){
@@ -95,10 +95,10 @@ void func_BGkill(char* str_pid){
 
 
 void func_BGstop(char  *str_pid){
-      if (str_pid == NULL){
-     	printf("Error: missing parameters\n");
-	return;
-      }
+  if (str_pid == NULL){
+    printf("Error: missing parameters\n");
+    return;
+  }
   pid_t pid = atoi(str_pid);
 	int boolVal = PifExist(head, pid);
 	if (boolVal != 0){
@@ -114,10 +114,10 @@ void func_BGstop(char  *str_pid){
 
 
 void func_BGstart(char *str_pid){
-      if (str_pid == NULL){
-     	printf("Error: missing parameters\n");
-	return;
-      }
+  if (str_pid == NULL){
+    printf("Error: missing parameters\n");
+    return;
+  }
   pid_t pid = atoi(str_pid);
 	int boolVal = PifExist(head, pid);
 	if (boolVal != 0){
@@ -133,10 +133,10 @@ void func_BGstart(char *str_pid){
 
 
 void func_pstat(char *  str_pid){
-      if (str_pid == NULL){
-     	printf("Error: missing parameters\n");
-	return;
-      }
+  if (str_pid == NULL){
+    printf("Error: missing parameters\n");
+    return;
+  }
 	pid_t pid = atoi(str_pid);
 	int boolVal = PifExist(head,pid);
 	char path1[128]; //Path to stat fie
