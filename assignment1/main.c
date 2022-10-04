@@ -81,7 +81,7 @@ void func_BGkill(char* str_pid){
 	  return;
   }
   pid_t pid = atoi(str_pid);
-	int boolVal = PifExist(head, pid)
+	int boolVal = PifExist(head, pid);
 	if (boolVal != 0){
 	  int eVal = kill(pid, SIGKILL); //Signal to kill process
 	  if (eVal != 0){
